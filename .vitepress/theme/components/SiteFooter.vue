@@ -14,7 +14,7 @@ const { frontmatter } = useData()
         <!-- Brand -->
         <div class="footer-col brand-col">
           <span class="footer-brand"><span style="color: var(--mss-accent)">Mega</span>SuperSoft</span>
-          <p class="footer-tagline">Software made with care in New Zealand.</p>
+          <p class="footer-tagline">Software made with <span class="material-symbols-outlined footer-heart">favorite</span> in New Zealand.</p>
           <p class="footer-copy">&copy; {{ year }} MegaSuperSoft. All rights reserved.</p>
         </div>
 
@@ -61,7 +61,7 @@ const { frontmatter } = useData()
       </div>
 
       <div class="footer-bottom">
-        <span class="footer-made">Made with care in New Zealand</span>
+        <span class="footer-made">Made with <span class="material-symbols-outlined footer-heart">favorite</span> in New Zealand</span>
         <span class="footer-bottom-copy">&copy; {{ year }} MegaSuperSoft</span>
       </div>
 
@@ -117,6 +117,7 @@ const { frontmatter } = useData()
   line-height: 1.5;
   margin: 0;
   max-width: 220px;
+  white-space: nowrap;
 }
 
 .footer-copy {
@@ -179,6 +180,14 @@ const { frontmatter } = useData()
   font-size: 0.75rem;
   color: var(--vp-c-text-3);
   font-style: italic;
+  white-space: nowrap;
+}
+
+.footer-heart {
+  font-size: 1em;
+  vertical-align: -0.15em;
+  color: var(--mss-accent);
+  font-variation-settings: 'FILL' 1;
 }
 
 .footer-bottom-copy {

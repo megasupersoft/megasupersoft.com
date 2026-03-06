@@ -1,6 +1,7 @@
 <script setup lang="ts">
-const ascii = `  █████████                                         █████████              ██████  █████
- ███░░░░░███ MEGA                                  ███░░░░░███            ███░░███░░███
+const asciiPre = `  █████████                                         █████████              ██████  █████
+ ███░░░░░███ `
+const asciiPost = `                                  ███░░░░░███            ███░░███░░███
 ░███    ░░░ █████ ████████████   ██████  ████████ ░███    ░░░   ██████   ░███ ░░░ ███████
 ░░█████████░░███ ░███░░███░░███ ███░░███░░███░░███░░█████████  ███░░███ ███████  ░░░███░
  ░░░░░░░░███░███ ░███ ░███ ░███░███████  ░███ ░░░  ░░░░░░░░███░███ ░███░░░███░     ░███
@@ -14,8 +15,8 @@ const ascii = `  █████████                                    
 
 <template>
   <div class="ascii-hero">
-    <pre class="ascii-art"><code>{{ ascii }}</code></pre>
-    <p class="ascii-tagline">Software made with care in New Zealand</p>
+    <pre class="ascii-art"><code>{{ asciiPre }}<span class="mega-text">MEGA</span>{{ asciiPost }}</code></pre>
+    <p class="ascii-tagline">Code, pixels, and play.</p>
   </div>
 </template>
 
@@ -57,6 +58,17 @@ const ascii = `  █████████                                    
   color: var(--vp-c-text-3);
   font-family: var(--vp-font-family-base);
   letter-spacing: 0.02em;
+}
+
+.mega-text {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 2.5em;
+  line-height: 0;
+  vertical-align: baseline;
+  letter-spacing: -0.02em;
+  color: var(--mss-accent);
+  margin-right: -1.95em;
 }
 
 /* iPad Pro landscape, small laptops */
