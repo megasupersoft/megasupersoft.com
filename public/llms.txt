@@ -1,0 +1,32 @@
+# MegaSuperSoft
+
+> Software made with care in New Zealand. Local-first, open source, privacy-respecting.
+
+MegaSuperSoft is an independent software company based in New Zealand that builds local-first desktop software and games. All software is open source. User data stays on the user's device.
+
+## Pages
+
+- [Home](https://megasupersoft.com/)
+- [Products](https://megasupersoft.com/products)
+- [Downloads](https://megasupersoft.com/downloads)
+- [About](https://megasupersoft.com/about)
+- [Privacy Policy](https://megasupersoft.com/privacy)
+- [Terms of Service](https://megasupersoft.com/terms)
+
+## Software
+
+- FFFFinance: Local-first personal finance for New Zealand. Bank-connected via Akahu, AI-powered, cross-platform.
+- OpenComp: Open-source image compositor for VFX artists.
+- NodeUI: Multimedia canvas for creative work.
+- FileUI: Cross-platform file browser for artists and content creators.
+
+## Games
+
+- Vampire Runners: 2D roguelike arcade game. Coming to Steam.
+- Renegade Cop: 3D single-player adventure RPG.
+- NeverEverland: Isometric Zelda-like adventure.
+
+## Links
+
+- GitHub: https://github.com/megasupersoft
+- Email: hello@megasupersoft.com

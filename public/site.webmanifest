@@ -1,0 +1,16 @@
+{
+  "name": "MegaSuperSoft",
+  "short_name": "MegaSuperSoft",
+  "description": "Software made with care in New Zealand",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#12110f",
+  "theme_color": "#12110f",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
