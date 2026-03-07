@@ -20,7 +20,7 @@ export default defineConfig({
   sitemap: {
     hostname,
     transformItems(items) {
-      return items.filter(item => !item.url.includes('logo') && !item.url.includes('404'))
+      return items.filter(item => !item.url.includes('logo') && !item.url.includes('404') && !item.url.includes('brand'))
     },
   },
 
@@ -139,6 +139,7 @@ export default defineConfig({
         text: 'About',
         items: [
           { text: 'About MegaSuperSoft', link: '/about' },
+          { text: 'Press Kit', link: '/presskit' },
         ],
       },
       {
