@@ -10,7 +10,7 @@ hero:
       text: Games
       link: /products#games
     - theme: alt
-      text: GitHub
+      text: Code
       link: https://github.com/megasupersoft
 
 features:
