@@ -1,7 +1,6 @@
 <script setup lang="ts">
-const asciiPre = `  █████████                                         █████████              ██████  █████
- ███░░░░░███ `
-const asciiPost = `                                  ███░░░░░███            ███░░███░░███
+const ascii = `  █████████                                         █████████              ██████  █████
+ ███░░░░░███                                       ███░░░░░███            ███░░███░░███
 ░███    ░░░ █████ ████████████   ██████  ████████ ░███    ░░░   ██████   ░███ ░░░ ███████
 ░░█████████░░███ ░███░░███░░███ ███░░███░░███░░███░░█████████  ███░░███ ███████  ░░░███░
  ░░░░░░░░███░███ ░███ ░███ ░███░███████  ░███ ░░░  ░░░░░░░░███░███ ░███░░░███░     ░███
@@ -15,7 +14,10 @@ const asciiPost = `                                  ███░░░░░█
 
 <template>
   <div class="ascii-hero">
-    <pre class="ascii-art"><code>{{ asciiPre }}<span class="mega-text">MEGA</span>{{ asciiPost }}</code></pre>
+    <div class="ascii-wrapper">
+      <pre class="ascii-art"><code>{{ ascii }}</code></pre>
+      <span class="mega-text">MEGA</span>
+    </div>
     <p class="ascii-tagline">Code, pixels, and play.</p>
   </div>
 </template>
@@ -29,6 +31,10 @@ const asciiPost = `                                  ███░░░░░█
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.ascii-wrapper {
+  position: relative;
 }
 
 .ascii-art {
@@ -52,23 +58,24 @@ const asciiPost = `                                  ███░░░░░█
   color: inherit;
 }
 
+.mega-text {
+  position: absolute;
+  top: 0;
+  left: 15%;
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: clamp(0.45rem, 1.6vw, 1.25rem);
+  letter-spacing: -0.02em;
+  color: var(--mss-accent);
+  pointer-events: none;
+}
+
 .ascii-tagline {
   margin-top: 1.5rem;
   font-size: 1.1rem;
   color: var(--vp-c-text-3);
   font-family: var(--vp-font-family-base);
   letter-spacing: 0.02em;
-}
-
-.mega-text {
-  font-family: var(--font-heading);
-  font-weight: 900;
-  font-size: 2.5em;
-  line-height: 0;
-  vertical-align: baseline;
-  letter-spacing: -0.02em;
-  color: var(--mss-accent);
-  margin-right: -1.95em;
 }
 
 /* iPad Pro landscape, small laptops */
@@ -91,6 +98,10 @@ const asciiPost = `                                  ███░░░░░█
   .ascii-tagline {
     font-size: 0.95rem;
   }
+  .mega-text {
+    font-size: clamp(0.5rem, 2vw, 1.4rem);
+    top: -3px;
+  }
 }
 
 /* Large phones, iPad Mini portrait */
@@ -103,6 +114,10 @@ const asciiPost = `                                  ███░░░░░█
   }
   .ascii-tagline {
     font-size: 0.9rem;
+  }
+  .mega-text {
+    font-size: clamp(0.45rem, 2.5vw, 1.2rem);
+    top: -6px;
   }
 }
 
@@ -119,12 +134,19 @@ const asciiPost = `                                  ███░░░░░█
   .ascii-tagline {
     font-size: 0.85rem;
   }
+  .mega-text {
+    font-size: 2.8vw;
+    top: -8px;
+  }
 }
 
 /* Very small phones */
 @media (max-width: 359px) {
   .ascii-art {
     font-size: 1.1vw;
+  }
+  .mega-text {
+    font-size: 2.5vw;
   }
 }
 </style>
