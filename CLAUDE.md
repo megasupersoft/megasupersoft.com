@@ -29,7 +29,7 @@ Brand asset regeneration: `npm run dev` then `node screenshot.mjs`
 - Cloudflare account: Danger Ltd (`13c756aa86b04a8c3067cf111a3f29b1`)
 - KV namespace: `megasupersoft-secrets` (id: `69be302ab7dd42c99affa0aec62480b4`)
 - Credentials stored in `.env` (gitignored), backed up to Cloudflare KV via `env:pull`/`env:push`
-- Social platforms: X (@megasupersoft), YouTube (@megasupersoftware), Bluesky (@megasupersoft.bsky.social)
+- Social platforms: X (@megasupersoft), YouTube (@megasupersoftware), Bluesky (@megasupersoft.bsky.social), GitHub (megasupersoft org — avatar is manual-only)
 
 ## Conventions
 

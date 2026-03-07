@@ -6,6 +6,7 @@
 //   node scripts/update-socials.mjs --x              # just X/Twitter
 //   node scripts/update-socials.mjs --bluesky        # just Bluesky
 //   node scripts/update-socials.mjs --youtube        # just YouTube
+//   node scripts/update-socials.mjs --github         # just GitHub (org metadata only, avatar is manual)
 //   node scripts/update-socials.mjs --avatar         # just avatars
 //   node scripts/update-socials.mjs --banner         # just banners
 //   node scripts/update-socials.mjs --theme light    # use light variants (default: dark)
@@ -32,11 +33,12 @@ const flagVal = (name) => {
 
 const theme = flagVal('theme') || 'dark';
 
-const anyPlatform = flag('x') || flag('bluesky') || flag('youtube');
+const anyPlatform = flag('x') || flag('bluesky') || flag('youtube') || flag('github');
 const platforms = {
   x: anyPlatform ? flag('x') : true,
   bluesky: anyPlatform ? flag('bluesky') : true,
   youtube: anyPlatform ? flag('youtube') : true,
+  github: anyPlatform ? flag('github') : true,
 };
 
 const anyAsset = flag('avatar') || flag('banner');
@@ -377,6 +379,37 @@ async function youtubeAuth() {
 }
 
 // ---------------------------------------------------------------------------
+// GitHub (org metadata only — avatar must be uploaded manually)
+// ---------------------------------------------------------------------------
+
+async function updateGitHub() {
+  const token = env('GITHUB_TOKEN');
+  const org = env('GITHUB_ORG');
+
+  process.stdout.write('  Updating org metadata...');
+  const res = await fetch(`https://api.github.com/orgs/${encodeURIComponent(org)}`, {
+    method: 'PATCH',
+    headers: {
+      Authorization: `Bearer ${token}`,
+      Accept: 'application/vnd.github+json',
+      'X-GitHub-Api-Version': '2022-11-28',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      name: 'MegaSuperSoft',
+      description: 'Software made with care in New Zealand',
+      blog: 'https://megasupersoft.com',
+      location: 'New Zealand',
+      email: 'hello@megasupersoft.com',
+      twitter_username: 'megasupersoft',
+    }),
+  });
+  if (!res.ok) throw new Error(`GitHub org update: ${res.status} ${await res.text()}`);
+  console.log(' done');
+  console.log('  Note: avatar must be updated manually at https://github.com/organizations/' + org + '/settings/profile');
+}
+
+// ---------------------------------------------------------------------------
 // Main
 // ---------------------------------------------------------------------------
 
@@ -437,6 +470,22 @@ if (platforms.youtube) {
     }
   } else {
     console.log('YouTube: skipped (missing credentials)');
+    skipped++;
+  }
+}
+
+if (platforms.github) {
+  if (hasEnv('GITHUB_TOKEN', 'GITHUB_ORG')) {
+    console.log('GitHub:');
+    try {
+      await updateGitHub();
+      ok++;
+    } catch (e) {
+      console.error(`  FAILED: ${e.message}`);
+      failed++;
+    }
+  } else {
+    console.log('GitHub: skipped (missing credentials)');
     skipped++;
   }
 }
