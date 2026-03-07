@@ -1,6 +1,12 @@
 import { defineConfig } from 'vitepress'
+import pkg from '../package.json'
 
 export default defineConfig({
+  vite: {
+    define: {
+      __APP_VERSION__: JSON.stringify(pkg.version),
+    },
+  },
   title: 'MegaSuperSoft',
   description: 'Software made with care in New Zealand',
   base: '/',

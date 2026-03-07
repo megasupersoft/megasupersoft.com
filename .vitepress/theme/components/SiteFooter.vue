@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { useData } from 'vitepress'
 
+declare const __APP_VERSION__: string
+
 const year = new Date().getFullYear()
+const version = __APP_VERSION__
 const { frontmatter } = useData()
 </script>
 
@@ -62,7 +65,7 @@ const { frontmatter } = useData()
 
       <div class="footer-bottom">
         <span class="footer-made">Made with <span class="material-symbols-outlined footer-heart">favorite</span> in New Zealand</span>
-        <span class="footer-bottom-copy">&copy; {{ year }} MegaSuperSoft</span>
+        <span class="footer-bottom-copy">&copy; {{ year }} MegaSuperSoft &middot; v{{ version }}</span>
       </div>
 
     </div>

@@ -43,7 +43,7 @@ const ascii = `  █████████                                    
   margin: 0;
   padding: 0;
   line-height: 1.15;
-  font-family: 'Menlo', 'Courier New', monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: clamp(0.25rem, 0.9vw, 0.7rem);
   white-space: pre;
   color: var(--vp-c-text-1);
