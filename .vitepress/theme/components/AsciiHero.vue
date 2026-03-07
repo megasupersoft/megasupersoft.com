@@ -43,11 +43,13 @@ const ascii = `  █████████                                    
   margin: 0;
   padding: 0;
   line-height: 1.15;
-  font-family: var(--vp-font-family-mono);
+  font-family: 'Menlo', 'Courier New', monospace;
   font-size: clamp(0.25rem, 0.9vw, 0.7rem);
   white-space: pre;
   color: var(--vp-c-text-1);
   opacity: 0.85;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
 }
 
 .ascii-art code {
