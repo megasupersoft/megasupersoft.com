@@ -217,6 +217,37 @@ html {
   color: var(--vp-c-text-2) !important;
 }
 
+/* ── Dither / noise texture ──────────────────────────────────────────────── */
+:root {
+  --dither-svg: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  --dither-opacity: 0.035;
+}
+html:not(.dark) {
+  --dither-opacity: 0.05;
+}
+
+.VPFeature::after,
+.VPSidebar::after,
+.site-footer::after,
+.vp-doc div[class*='language-']::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--dither-svg);
+  background-size: 256px 256px;
+  opacity: var(--dither-opacity);
+  pointer-events: none;
+  border-radius: inherit;
+  z-index: 1;
+}
+
+.VPFeature,
+.VPSidebar,
+.site-footer,
+.vp-doc div[class*='language-'] {
+  position: relative;
+}
+
 /* ── Sidebar ─────────────────────────────────────────────────────────────── */
 .VPSidebar {
   background: var(--vp-sidebar-bg-color) !important;
