@@ -539,7 +539,7 @@ html {
 /* iPad Mini portrait, small tablets (768px) */
 @media (max-width: 768px) {
   .VPHero {
-    padding-bottom: 4rem !important;
+    padding-bottom: 6rem !important;
   }
   .vp-doc h1 { font-size: 1.5rem; }
   .vp-doc h2 { font-size: 1.2rem; }
@@ -574,7 +574,7 @@ html {
 /* Large phones (480px) */
 @media (max-width: 480px) {
   .VPHero {
-    padding-bottom: 3rem !important;
+    padding-bottom: 8rem !important;
   }
   .VPFeatures .items {
     grid-template-columns: 1fr !important;
