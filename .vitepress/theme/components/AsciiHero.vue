@@ -74,10 +74,12 @@ const ascii = `  █████████                                    
 
 .ascii-tagline {
   margin-top: 1.5rem;
-  font-size: 1.1rem;
+  font-size: 2rem;
   color: var(--vp-c-text-3);
-  font-family: var(--vp-font-family-base);
-  letter-spacing: 0.02em;
+  opacity: 0.6;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 /* iPad Pro landscape, small laptops */
@@ -98,7 +100,7 @@ const ascii = `  █████████                                    
     font-size: clamp(0.28rem, 1.1vw, 0.55rem);
   }
   .ascii-tagline {
-    font-size: 0.95rem;
+    font-size: 1.6rem;
   }
   .mega-text {
     font-size: clamp(0.5rem, 2vw, 1.4rem);
@@ -115,7 +117,7 @@ const ascii = `  █████████                                    
     font-size: clamp(0.22rem, 1.3vw, 0.45rem);
   }
   .ascii-tagline {
-    font-size: 0.9rem;
+    font-size: 1.3rem;
   }
   .mega-text {
     font-size: clamp(0.45rem, 2.5vw, 1.2rem);
@@ -134,7 +136,7 @@ const ascii = `  █████████                                    
     overflow: hidden;
   }
   .ascii-tagline {
-    font-size: 0.85rem;
+    font-size: 1.1rem;
   }
   .mega-text {
     font-size: 2.8vw;
