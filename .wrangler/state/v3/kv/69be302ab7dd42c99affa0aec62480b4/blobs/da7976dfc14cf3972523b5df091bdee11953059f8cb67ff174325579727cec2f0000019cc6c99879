@@ -1,0 +1,24 @@
+# --- X / Twitter ---
+# Create an app at https://developer.twitter.com with read+write permissions.
+# Generate OAuth 1.0a consumer keys and access tokens.
+X_API_KEY=rONnAc2baW0dh1PbQRpOxMNT9
+X_API_SECRET=0p84Oth8PBC1IILaGMYuixqmqeqIpfwrYcGoXjnqG75XjdEBp6
+X_ACCESS_TOKEN=2030115189967011840-LbSQXk7MzXXY9cJy9uxvDm5AibMU5S
+X_ACCESS_SECRET=6VC684rxssL8YqOi1rr71s48bAPUDdmPX5rhHkjBbvk0k
+
+# --- Bluesky ---
+# Create an app password at https://bsky.app/settings/app-passwords
+BLUESKY_HANDLE=megasupersoft.bsky.social
+BLUESKY_APP_PASSWORD=
+
+# --- YouTube ---
+# 1. Create OAuth2 credentials at https://console.cloud.google.com/apis/credentials
+#    (Desktop app type, enable YouTube Data API v3)
+# 2. Set client ID and secret below, then run:
+#    node scripts/update-socials.mjs --youtube-auth
+# 3. Paste the refresh token below.
+# 4. Find your channel ID in YouTube Studio > Settings > Channel > Advanced settings
+YOUTUBE_CLIENT_ID=
+YOUTUBE_CLIENT_SECRET=
+YOUTUBE_REFRESH_TOKEN=
+YOUTUBE_CHANNEL_ID=
