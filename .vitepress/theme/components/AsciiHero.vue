@@ -1,5 +1,7 @@
 <script setup lang="ts">
-const ascii = `  █████████                                         █████████              ██████  █████
+import { computed } from 'vue'
+
+const asciiRaw = `  █████████                                         █████████              ██████  █████
  ███░░░░░███                                       ███░░░░░███            ███░░███░░███
 ░███    ░░░ █████ ████████████   ██████  ████████ ░███    ░░░   ██████   ░███ ░░░ ███████
 ░░█████████░░███ ░███░░███░░███ ███░░███░░███░░███░░█████████  ███░░███ ███████  ░░░███░
@@ -10,12 +12,16 @@ const ascii = `  █████████                                    
                       ░███
                       █████
                      ░░░░░`
+
+const asciiHtml = computed(() =>
+  asciiRaw.replace(/[█░]/g, ch => `<span class="bc">${ch}</span>`)
+)
 </script>
 
 <template>
   <div class="ascii-hero">
     <div class="ascii-wrapper">
-      <pre class="ascii-art"><code>{{ ascii }}</code></pre>
+      <pre class="ascii-art"><code v-html="asciiHtml"></code></pre>
       <span class="mega-text">MEGA</span>
     </div>
     <p class="ascii-tagline">Code, pixels, and play.</p>
@@ -58,6 +64,13 @@ const ascii = `  █████████                                    
   padding: 0 !important;
   font-size: inherit;
   color: inherit;
+}
+
+.ascii-art :deep(.bc) {
+  display: inline-block;
+  width: 1ch;
+  overflow: hidden;
+  text-align: center;
 }
 
 .mega-text {
