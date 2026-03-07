@@ -124,7 +124,7 @@ const asciiHtml = computed(() =>
 /* Large phones, iPad Mini portrait */
 @media (max-width: 768px) {
   .ascii-hero {
-    min-height: 100svh;
+    min-height: calc(100svh - 12rem);
     padding: 0 1rem 2rem;
     justify-content: center;
   }
@@ -144,7 +144,7 @@ const asciiHtml = computed(() =>
 /* Phones */
 @media (max-width: 480px) {
   .ascii-hero {
-    min-height: 100svh;
+    min-height: calc(100svh - 12rem);
     padding: 0 0.75rem 1.5rem;
     justify-content: center;
     overflow-x: hidden;
