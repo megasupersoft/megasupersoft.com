@@ -241,6 +241,7 @@ html:not(.dark) {
     radial-gradient(rgba(var(--dither-color), var(--dither-opacity)) 1px, transparent 1px);
   background-size: 4px 4px;
   background-position: 0 0, 2px 2px;
+  background-repeat: repeat;
   pointer-events: none;
   border-radius: inherit;
   z-index: 1;
