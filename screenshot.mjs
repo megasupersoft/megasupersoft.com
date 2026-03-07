@@ -33,7 +33,7 @@ const scaleCSS = (scale, nudgeUp) => `
 const formatCSS = {
   logo: baseCSS + scaleCSS(1.3, 50),
   x: baseCSS + scaleCSS(1.4, 40),
-  youtube: baseCSS + scaleCSS(2.2, 80),
+  youtube: baseCSS + scaleCSS(1.7, 60),
   og: baseCSS + scaleCSS(1.5, 40),
 };
 

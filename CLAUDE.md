@@ -12,7 +12,7 @@ npm run env:pull       # download .env from Cloudflare KV
 npm run env:push       # upload .env to Cloudflare KV
 ```
 
-Brand asset regeneration: `npm run dev` then `node screenshot.mjs`
+Brand asset regeneration: use `/brand-assets` command (regenerates PNGs + pushes to socials)
 
 ## Key paths
 
@@ -20,7 +20,7 @@ Brand asset regeneration: `npm run dev` then `node screenshot.mjs`
 - `.vitepress/theme/Layout.vue` — custom layout wrapper
 - `.vitepress/theme/components/` — Vue components (SiteFooter, etc.)
 - `.vitepress/theme/styles/` — CSS
-- `public/brand/` — brand assets (PNG + SVG), dark/light variants
+- `public/brand/` — brand assets (PNG), dark/light variants
 - `scripts/update-socials.mjs` — push brand assets to social platforms
 - `screenshot.mjs` — generate brand assets via Playwright
 
