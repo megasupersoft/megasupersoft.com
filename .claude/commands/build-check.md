@@ -1,0 +1,1 @@
+Run `npm run build` and analyze the output. If the build fails, diagnose the error and suggest a fix. If it succeeds, report any warnings.

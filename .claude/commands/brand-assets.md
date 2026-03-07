@@ -1,0 +1,1 @@
+Help regenerate brand assets. Check if the dev server is running (port 5173). If not, start it in the background with `npm run dev`. Then run `node screenshot.mjs` to regenerate all brand assets in public/brand/. Report which files were created or updated.
