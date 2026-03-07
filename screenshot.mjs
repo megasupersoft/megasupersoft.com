@@ -17,7 +17,7 @@ for (const scheme of ['dark', 'light']) {
     document.querySelector('.VPFeatures')?.setAttribute('style', 'display:none!important');
     document.querySelector('.site-footer')?.setAttribute('style', 'display:none!important');
     // Hide tagline and actions within ascii-hero
-    for (const el of document.querySelectorAll('.ascii-hero .tagline, .ascii-hero .actions, .ascii-hero .VPButton')) {
+    for (const el of document.querySelectorAll('.ascii-hero .tagline, .ascii-hero .ascii-tagline, .ascii-hero .actions, .ascii-hero .VPButton')) {
       el.setAttribute('style', 'display:none!important');
     }
   });
@@ -28,6 +28,21 @@ for (const scheme of ['dark', 'light']) {
     const cy = preBox.y + preBox.height / 2;
     await sqPage.screenshot({
       path: `public/brand/logo-square-${scheme}-raw.png`,
+      clip: {
+        x: Math.max(0, cx - side / 2),
+        y: Math.max(0, cy - side / 2),
+        width: side,
+        height: side,
+      },
+    });
+  }
+  // Circle-safe variant (for YouTube etc.) — more padding so logo fits inside circular crop
+  if (preBox) {
+    const side = preBox.width * 1.8;
+    const cx = preBox.x + preBox.width / 2;
+    const cy = preBox.y + preBox.height * 0.55; // nudge down slightly to visually center
+    await sqPage.screenshot({
+      path: `public/brand/logo-circle-${scheme}-raw.png`,
       clip: {
         x: Math.max(0, cx - side / 2),
         y: Math.max(0, cy - side / 2),
@@ -94,6 +109,8 @@ await browser.close();
 for (const scheme of ['dark', 'light']) {
   execSync(`sips -z 1024 1024 public/brand/logo-square-${scheme}-raw.png --out public/brand/logo-square-${scheme}.png 2>/dev/null`);
   execSync(`rm public/brand/logo-square-${scheme}-raw.png`);
+  execSync(`sips -z 800 800 public/brand/logo-circle-${scheme}-raw.png --out public/brand/logo-circle-${scheme}.png 2>/dev/null`);
+  execSync(`rm public/brand/logo-circle-${scheme}-raw.png`);
 }
 
 console.log('done');

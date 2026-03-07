@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",
-    "preview": "vitepress preview"
+    "preview": "vitepress preview",
+    "update-socials": "node scripts/update-socials.mjs",
+    "env:pull": "npx wrangler kv key get --namespace-id=69be302ab7dd42c99affa0aec62480b4 --remote --text dotenv > .env",
+    "env:push": "npx wrangler kv key put --namespace-id=69be302ab7dd42c99affa0aec62480b4 --remote dotenv \"$(cat .env)\""
   },
   "repository": {
     "type": "git",
