@@ -124,7 +124,9 @@ const asciiHtml = computed(() =>
 /* Large phones, iPad Mini portrait */
 @media (max-width: 768px) {
   .ascii-hero {
-    padding: 6rem 1rem 2rem;
+    min-height: 100svh;
+    padding: 0 1rem 2rem;
+    justify-content: center;
   }
   .ascii-art {
     font-size: clamp(0.22rem, 1.3vw, 0.45rem);
@@ -132,7 +134,6 @@ const asciiHtml = computed(() =>
   .ascii-tagline {
     font-size: 1.5rem;
     margin-top: 1.75rem;
-    margin-bottom: 3rem;
   }
   .mega-text {
     font-size: clamp(0.45rem, 2.5vw, 1.2rem);
@@ -143,7 +144,9 @@ const asciiHtml = computed(() =>
 /* Phones */
 @media (max-width: 480px) {
   .ascii-hero {
-    padding: 8rem 0.75rem 1.5rem;
+    min-height: 100svh;
+    padding: 0 0.75rem 1.5rem;
+    justify-content: center;
     overflow-x: hidden;
   }
   .ascii-art {
@@ -153,7 +156,6 @@ const asciiHtml = computed(() =>
   .ascii-tagline {
     font-size: 1.4rem;
     margin-top: 2rem;
-    margin-bottom: 4rem;
   }
   .mega-text {
     font-size: 2.8vw;
