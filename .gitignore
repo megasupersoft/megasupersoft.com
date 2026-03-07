@@ -1,7 +1,23 @@
 node_modules
+.output
+.nuxt
+.nitro
+.cache
+.data
+dist
+
+# VitePress (legacy, can remove after migration confirmed)
 .vitepress/dist
 .vitepress/cache
+
+# Cloudflare
+.wrangler
+.dev.vars
+
+# System
 .DS_Store
 .env
+
+# Claude / Serena
 .claude/settings.local.json
 .serena/

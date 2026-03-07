@@ -1,22 +1,30 @@
 {
   "name": "megasupersoft.com",
-  "version": "2.0.4",
+  "version": "3.0.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vitepress dev",
-    "build": "vitepress build",
-    "preview": "vitepress preview",
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "preview": "nuxt preview",
+    "generate": "nuxt generate",
+    "postinstall": "nuxt prepare",
+    "setup": "node scripts/setup.mjs",
     "update-socials": "node scripts/update-socials.mjs",
     "env:pull": "npx wrangler kv key get --namespace-id=69be302ab7dd42c99affa0aec62480b4 --remote --text dotenv > .env",
     "env:push": "npx wrangler kv key put --namespace-id=69be302ab7dd42c99affa0aec62480b4 --remote dotenv \"$(cat .env)\""
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/megasupersoft/megasupersoft.com.git"
+  "dependencies": {
+    "@nuxt/content": "^3.0.0",
+    "@nuxthub/core": "^0.10.0",
+    "better-sqlite3": "^12.6.2",
+    "nuxt": "^3.17.0",
+    "nuxt-auth-utils": "^0.5.29",
+    "vue": "^3.5.0",
+    "vue-router": "^4.5.0"
   },
   "devDependencies": {
     "playwright": "^1.58.2",
-    "vitepress": "^1.6.4"
+    "wrangler": "^4.0.0"
   }
 }

@@ -1,0 +1,259 @@
+/* MegaSuperSoft — Theme Variables & Global Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Inter+Tight:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ══════════════════════════════════════════════════════════════════════════ */
+/* THEME PALETTES                                                           */
+/* ══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Dark (default) ────────────────────────────────────────────────────── */
+:root {
+  --mss-bg:           #12110f;
+  --mss-bg-soft:      #191714;
+  --mss-bg-mute:      #201d1a;
+  --mss-text-1:       #bfbab2;
+  --mss-text-2:       #a09b94;
+  --mss-text-3:       #6e6a64;
+  --mss-divider:      #2e2a26;
+  --mss-accent:       #c27a7a;
+  --mss-accent-light: #d8a8a8;
+  --mss-accent-dark:  #824a4a;
+  --mss-accent-raw:   194, 122, 122;
+  --mss-border:       transparent;
+  --mss-nav-bg:       rgba(18, 17, 15, 0.82);
+  --mss-tip:          #7ab89e;
+  --mss-code-btn:     #5a7a96;
+  --mss-warning:      #c2a06a;
+
+  --font-body:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading: 'Inter Tight', 'Inter', -apple-system, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, 'Cascadia Code', monospace;
+
+  --dither-color: 255, 255, 255;
+  --dither-opacity: 0.04;
+
+  color-scheme: dark;
+}
+
+/* ── Light ────────────────────────────────────────────────────────────────── */
+.light {
+  --mss-bg:           #a39e98;
+  --mss-bg-soft:      #9a958f;
+  --mss-bg-mute:      #8c8780;
+  --mss-text-1:       #181614;
+  --mss-text-2:       #222018;
+  --mss-text-3:       #54504a;
+  --mss-divider:      #847f78;
+  --mss-accent:       #96525a;
+  --mss-accent-light: #723d42;
+  --mss-accent-dark:  #847f78;
+  --mss-accent-raw:   150, 82, 90;
+  --mss-border:       transparent;
+  --mss-nav-bg:       rgba(163, 158, 152, 0.92);
+  --mss-tip:          #5a9678;
+  --mss-code-btn:     #5a7a96;
+  --mss-warning:      #96783c;
+
+  --dither-color: 0, 0, 0;
+  --dither-opacity: 0.06;
+
+  color-scheme: light;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════ */
+/* GLOBAL STYLES                                                            */
+/* ══════════════════════════════════════════════════════════════════════════ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--mss-bg);
+  color: var(--mss-text-1);
+  line-height: 1.6;
+}
+
+::selection {
+  background: rgba(var(--mss-accent-raw), 0.25);
+  color: var(--mss-text-1);
+}
+
+a {
+  color: var(--mss-accent);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+a:hover {
+  color: var(--mss-accent-light);
+}
+
+/* ── Scrollbars ──────────────────────────────────────────────────────────── */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--mss-divider) transparent;
+}
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--mss-divider); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--mss-text-3); }
+
+/* ── Dither / noise texture ──────────────────────────────────────────────── */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(rgba(var(--dither-color), var(--dither-opacity)) 1px, transparent 1px),
+    radial-gradient(rgba(var(--dither-color), var(--dither-opacity)) 1px, transparent 1px);
+  background-size: 4px 4px;
+  background-position: 0 0, 2px 2px;
+  background-repeat: repeat;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ── Content typography (for markdown / prose) ───────────────────────────── */
+.prose {
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: var(--mss-text-1);
+  max-width: 720px;
+}
+
+.prose h1, .prose h2, .prose h3 {
+  font-family: var(--font-heading);
+  color: var(--mss-text-1);
+}
+
+.prose h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+.prose h2 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--mss-divider);
+}
+.prose h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose p {
+  margin-bottom: 1rem;
+}
+
+.prose a {
+  color: var(--mss-accent);
+}
+.prose a:hover {
+  color: var(--mss-accent-light);
+}
+
+.prose strong {
+  color: var(--mss-text-1);
+  font-weight: 600;
+}
+
+.prose ul, .prose ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+.prose li {
+  margin-bottom: 0.35rem;
+}
+
+.prose code {
+  background: rgba(var(--mss-accent-raw), 0.08);
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+  font-size: 0.85em;
+  font-family: var(--font-mono);
+  color: var(--mss-accent-light);
+}
+
+.prose pre {
+  background: var(--mss-bg-soft);
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+.prose pre code {
+  background: none;
+  padding: 0;
+  color: var(--mss-text-1);
+}
+
+.prose table {
+  font-size: 0.82rem;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+.prose th {
+  font-weight: 700;
+  color: var(--mss-accent);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  background: var(--mss-bg-soft);
+}
+.prose td {
+  padding: 0.6rem 0.75rem;
+  border-top: 1px solid var(--mss-divider);
+}
+.prose tr {
+  transition: background 0.12s ease;
+}
+.prose tr:hover td {
+  background: rgba(var(--mss-accent-raw), 0.04);
+}
+
+.prose blockquote {
+  border-left: none;
+  background: rgba(var(--mss-accent-raw), 0.03);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.prose hr {
+  border: none;
+  border-top: 1px solid var(--mss-divider);
+  margin: 2rem 0;
+}
+
+/* ── Responsive typography ────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .prose { font-size: 0.85rem; }
+  .prose h1 { font-size: 1.5rem; }
+  .prose h2 { font-size: 1.2rem; }
+}
+
+@media (max-width: 480px) {
+  .prose h1 { font-size: 1.35rem; }
+  .prose table { font-size: 0.75rem; }
+  .prose th, .prose td { padding: 0.4rem 0.5rem; }
+}

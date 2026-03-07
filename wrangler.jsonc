@@ -1,0 +1,24 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "megasupersoft-com",
+  "pages_build_output_dir": "dist",
+  "compatibility_date": "2025-03-07",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "megasupersoft-db",
+      "database_id": "a63f8fc0-4d23-4778-93af-58d352e3dc3f"
+    },
+    {
+      "binding": "CONTENT_DB",
+      "database_name": "megasupersoft-content",
+      "database_id": "80d97727-a4b3-4dc9-9572-1f67c229602b"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "KV",
+      "id": "69be302ab7dd42c99affa0aec62480b4"
+    }
+  ]
+}
