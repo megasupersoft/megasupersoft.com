@@ -125,6 +125,7 @@ const asciiHtml = computed(() =>
 @media (max-width: 768px) {
   .ascii-hero {
     padding: 3rem 1rem 2rem;
+    padding-top: 3rem;
   }
   .ascii-art {
     font-size: clamp(0.22rem, 1.3vw, 0.45rem);
@@ -143,7 +144,7 @@ const asciiHtml = computed(() =>
 /* Phones */
 @media (max-width: 480px) {
   .ascii-hero {
-    padding: 2.5rem 0.75rem 1.5rem;
+    padding: 4rem 0.75rem 1.5rem;
     overflow-x: hidden;
   }
   .ascii-art {
