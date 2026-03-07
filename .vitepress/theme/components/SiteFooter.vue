@@ -50,6 +50,7 @@ const { frontmatter } = useData()
             <li><a href="/about">About</a></li>
             <li><a href="https://github.com/megasupersoft" target="_blank" rel="noopener">GitHub</a></li>
             <li><a href="https://x.com/megasupersoft" target="_blank" rel="noopener">X</a></li>
+            <li><a href="https://www.youtube.com/@megasupersoftware" target="_blank" rel="noopener">YouTube</a></li>
             <li><a href="https://bsky.app/profile/megasupersoft.bsky.social" target="_blank" rel="noopener">Bluesky</a></li>
           </ul>
         </div>
