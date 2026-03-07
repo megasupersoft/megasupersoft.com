@@ -230,7 +230,9 @@ html:not(.dark) {
 .VPFeature::after,
 .VPSidebar::after,
 .site-footer::after,
-.vp-doc div[class*='language-']::after {
+.vp-doc div[class*='language-']::after,
+.VPContent::after,
+.VPNavBar::after {
   content: '';
   position: absolute;
   inset: 0;
@@ -247,7 +249,9 @@ html:not(.dark) {
 .VPFeature,
 .VPSidebar,
 .site-footer,
-.vp-doc div[class*='language-'] {
+.vp-doc div[class*='language-'],
+.VPContent,
+.VPNavBar {
   position: relative;
 }
 
