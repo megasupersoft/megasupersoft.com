@@ -45,6 +45,7 @@ export default defineConfig({
 
     // Twitter Card
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:site', content: '@megasupersoft' }],
     ['meta', { name: 'twitter:image', content: `${hostname}/og-image.png` }],
 
     // Security & privacy
@@ -69,6 +70,8 @@ export default defineConfig({
       },
       sameAs: [
         'https://github.com/megasupersoft',
+        'https://x.com/megasupersoft',
+        'https://bsky.app/profile/megasupersoft.bsky.social',
       ],
       contactPoint: {
         '@type': 'ContactPoint',
@@ -149,6 +152,11 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/megasupersoft' },
+      { icon: 'x', link: 'https://x.com/megasupersoft' },
+      {
+        icon: { svg: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.574 6.467.744 3.033 3.40 4.065 5.824 3.556 1.96-.412 3.68-.412 5.602-.412-3.766 2.606-9.504 1.233-11.236 5.67-.263.672-.39 1.085.46 1.95C4.924 24.667 11.5 21 12 21c.5 0 7.076 3.667 10.776 0 .85-.866.723-1.278.46-1.95-1.732-4.437-7.47-3.064-11.236-5.67 1.922 0 3.642 0 5.602.412 2.424.509 5.08-.523 5.824-3.556.196-.818.574-5.778.574-6.467 0-.688-.139-1.86-.902-2.203-.659-.3-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8z"/></svg>' },
+        link: 'https://bsky.app/profile/megasupersoft.bsky.social',
+      },
     ],
 
     search: {

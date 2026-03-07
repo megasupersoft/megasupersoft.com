@@ -49,4 +49,6 @@ MegaSuperSoft is a deliberately silly name. We don't take ourselves too seriousl
 ## Contact
 
 - **GitHub:** [github.com/megasupersoft](https://github.com/megasupersoft)
+- **X:** [@megasupersoft](https://x.com/megasupersoft)
+- **Bluesky:** [@megasupersoft.bsky.social](https://bsky.app/profile/megasupersoft.bsky.social)
 - **Email:** hello@megasupersoft.com
