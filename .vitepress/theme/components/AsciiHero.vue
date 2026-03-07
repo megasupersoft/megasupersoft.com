@@ -130,7 +130,9 @@ const asciiHtml = computed(() =>
     font-size: clamp(0.22rem, 1.3vw, 0.45rem);
   }
   .ascii-tagline {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    margin-top: 1.75rem;
+    margin-bottom: 1.5rem;
   }
   .mega-text {
     font-size: clamp(0.45rem, 2.5vw, 1.2rem);
@@ -149,7 +151,9 @@ const asciiHtml = computed(() =>
     overflow: hidden;
   }
   .ascii-tagline {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
   .mega-text {
     font-size: 2.8vw;
