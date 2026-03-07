@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <rect width="1200" height="1200" fill="#12110f"/>
+
+  <!-- Content centered in 285-915 band (630px tall, will be cropped to this) -->
+
+  <text
+    font-family="'Menlo', 'Courier New', monospace"
+    font-size="11"
+    fill="#bfbab2"
+    opacity="0.85"
+    xml:space="preserve"
+    letter-spacing="0"
+  >
+    <tspan x="260" y="420">  █████████                                         █████████              ██████  █████</tspan>
+    <tspan x="260" y="433"> ███░░░░░███                                       ███░░░░░███            ███░░███░░███</tspan>
+    <tspan x="260" y="446">░███    ░░░ █████ ████████████   ██████  ████████ ░███    ░░░   ██████   ░███ ░░░ ███████</tspan>
+    <tspan x="260" y="459">░░█████████░░███ ░███░░███░░███ ███░░███░░███░░███░░█████████  ███░░███ ███████  ░░░███░</tspan>
+    <tspan x="260" y="472"> ░░░░░░░░███░███ ░███ ░███ ░███░███████  ░███ ░░░  ░░░░░░░░███░███ ░███░░░███░     ░███</tspan>
+    <tspan x="260" y="485"> ███    ░███░███ ░███ ░███ ░███░███░░░   ░███      ███    ░███░███ ░███  ░███      ░███ ███</tspan>
+    <tspan x="260" y="498">░░█████████ ░░████████░███████ ░░██████  █████    ░░█████████ ░░██████   █████     ░░█████</tspan>
+    <tspan x="260" y="511"> ░░░░░░░░░   ░░░░░░░░ ░███░░░   ░░░░░░  ░░░░░      ░░░░░░░░░   ░░░░░░   ░░░░░       ░░░░░</tspan>
+    <tspan x="260" y="524">                      ░███</tspan>
+    <tspan x="260" y="537">                      █████</tspan>
+    <tspan x="260" y="550">                     ░░░░░</tspan>
+  </text>
+
+  <!-- MEGA overlay -->
+  <text
+    x="358"
+    y="443"
+    font-family="'Inter Tight', 'Inter', system-ui, sans-serif"
+    font-weight="900"
+    font-size="18"
+    letter-spacing="-0.02em"
+    fill="#c27a7a"
+  >MEGA</text>
+
+  <!-- Tagline -->
+  <text
+    x="600"
+    y="640"
+    text-anchor="middle"
+    font-family="'Inter Tight', 'Inter', system-ui, sans-serif"
+    font-weight="600"
+    font-size="30"
+    fill="#6e6a64"
+    opacity="0.8"
+  >Code, pixels, and play.</text>
+
+  <!-- Brand -->
+  <text
+    x="600"
+    y="730"
+    text-anchor="middle"
+    font-family="'JetBrains Mono', 'Menlo', monospace"
+    font-weight="800"
+    font-size="16"
+  >
+    <tspan fill="#c27a7a">Mega</tspan><tspan fill="#bfbab2">SuperSoft</tspan>
+  </text>
+
+  <!-- URL -->
+  <text
+    x="600"
+    y="756"
+    text-anchor="middle"
+    font-family="'JetBrains Mono', 'Menlo', monospace"
+    font-size="12"
+    fill="#6e6a64"
+    opacity="0.5"
+  >megasupersoft.com</text>
+</svg>

@@ -38,9 +38,14 @@ export default defineConfig({
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'MegaSuperSoft' }],
     ['meta', { property: 'og:locale', content: 'en_NZ' }],
+    ['meta', { property: 'og:image', content: `${hostname}/og-image.png` }],
+    ['meta', { property: 'og:image:width', content: '1200' }],
+    ['meta', { property: 'og:image:height', content: '630' }],
+    ['meta', { property: 'og:image:alt', content: 'MegaSuperSoft — Code, pixels, and play.' }],
 
     // Twitter Card
-    ['meta', { name: 'twitter:card', content: 'summary' }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:image', content: `${hostname}/og-image.png` }],
 
     // Security & privacy
     ['meta', { name: 'referrer', content: 'strict-origin-when-cross-origin' }],
