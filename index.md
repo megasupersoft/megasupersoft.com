@@ -4,8 +4,11 @@ layout: home
 hero:
   actions:
     - theme: brand
-      text: Our Products
-      link: /products
+      text: Software
+      link: /products#software
+    - theme: brand
+      text: Games
+      link: /products#games
     - theme: alt
       text: GitHub
       link: https://github.com/megasupersoft

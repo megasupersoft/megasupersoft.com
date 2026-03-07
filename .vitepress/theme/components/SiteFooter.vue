@@ -14,7 +14,7 @@ const { frontmatter } = useData()
         <!-- Brand -->
         <div class="footer-col brand-col">
           <span class="footer-brand"><span style="color: var(--mss-accent)">Mega</span>SuperSoft</span>
-          <p class="footer-tagline">Software made with <span class="material-symbols-outlined footer-heart">favorite</span> in New Zealand.</p>
+          <p class="footer-tagline">Code, pixels, and play.</p>
           <p class="footer-copy">&copy; {{ year }} MegaSuperSoft. All rights reserved.</p>
         </div>
 
