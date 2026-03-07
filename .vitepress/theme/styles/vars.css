@@ -227,14 +227,9 @@ html:not(.dark) {
   --dither-opacity: 0.06;
 }
 
-.VPFeature::after,
-.VPSidebar::after,
-.site-footer::after,
-.vp-doc div[class*='language-']::after,
-.VPContent::after,
-.VPNavBar::after {
+body::after {
   content: '';
-  position: absolute;
+  position: fixed;
   inset: 0;
   background-image:
     radial-gradient(rgba(var(--dither-color), var(--dither-opacity)) 1px, transparent 1px),
@@ -243,17 +238,7 @@ html:not(.dark) {
   background-position: 0 0, 2px 2px;
   background-repeat: repeat;
   pointer-events: none;
-  border-radius: inherit;
-  z-index: 1;
-}
-
-.VPFeature,
-.VPSidebar,
-.site-footer,
-.vp-doc div[class*='language-'],
-.VPContent,
-.VPNavBar {
-  position: relative;
+  z-index: 9999;
 }
 
 /* ── Sidebar ─────────────────────────────────────────────────────────────── */
